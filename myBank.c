@@ -20,15 +20,15 @@ void openAccount (double amount){
             accountArr[i][ACCOUNT_NUM_C] = 1;   
             flag = 1;  
             accountArr[i][AMOUNT_C] = amount;
-            printf("Account number is: %d",901+i);
+            printf("Account number is: %d \n",901+i);
         }
         }  
         if (flag == 0){
-            printf("there is no room for your account have a great day");
+            printf("there is no room for your account have a great day \n");
         }
   }else
   {
-      printf("Please enter an amount that's positive and larger then zero");
+      printf("Please enter an amount that's positive and larger then zero \n");
   }
   
 }
@@ -39,12 +39,12 @@ void ballance (int account_number){
     {
         if (accountArr[account_number-901][ACCOUNT_NUM_C] == 0)
          {
-            printf("Your acount is closed");
+            printf("Your acount is closed \n");
          }else{
             printf("Your ballance is: %0.2lf \n", accountArr[account_number-901][AMOUNT_C]);
          }
     }else{
-            printf("ERROR Not a valid number");
+            printf("ERROR Not a valid number \n");
          }
 }
 void deposit(int account_number, double amount){
@@ -53,14 +53,14 @@ void deposit(int account_number, double amount){
     {    
         if (accountArr[account_number-901][ACCOUNT_NUM_C] == 0)
         {
-            printf("Your acount is closed");
+            printf("Your acount is closed \n");
         }else
         {
                 accountArr[account_number-901][AMOUNT_C] += amount;
-                printf("Your ballance is: %0.2lf", accountArr[account_number-901][AMOUNT_C]);
+                printf("Your ballance is: %0.2lf \n", accountArr[account_number-901][AMOUNT_C]);
         }
     }else{
-        printf( "ERROR Not a valid number");
+        printf( "ERROR Not a valid number \n");
          }  
 }
 void withdrawal(int account_number, double amount){
@@ -69,24 +69,24 @@ void withdrawal(int account_number, double amount){
     {
         if (accountArr[account_number-901][ACCOUNT_NUM_C] == 0)
         {
-            printf("Your acount is closed");
+            printf("Your acount is closed \n");
         } 
         else if ( accountArr[account_number-901][AMOUNT_C] > amount && amount >= 0)
             {
                     accountArr[account_number-901][AMOUNT_C] -= amount;
-                    printf("Your ballance is: %0.2lf", accountArr[account_number-901][AMOUNT_C]);
+                    printf("Your ballance is: %0.2lf \n", accountArr[account_number-901][AMOUNT_C]);
             } 
             else if (accountArr[account_number-901][AMOUNT_C] == amount)
             {
                     accountArr[account_number-901][AMOUNT_C] = 0;
-                    printf("**Warning** Your ballance is now empty");
+                    printf("**Warning** Your ballance is now empty \n");
             }
             else{
-                  printf("Not enough funds in your balance");
+                  printf("Not enough funds in your balance \n");
                 }
     }
     else {
-           printf( "ERROR Not a valid number");
+           printf( "ERROR Not a valid number \n");
          }
 }
 
@@ -97,9 +97,9 @@ void closeAccount(int account_number){
     accountArr[account_number-901][ACCOUNT_NUM_C] = 0;
     accountArr[account_number-901][AMOUNT_C] = 0;
 
-    printf("Your acount is closed");
+    printf("Your acount is closed \n");
 }else{
-         printf( "ERROR Not a valid account number");
+         printf( "ERROR Not a valid account number \n");
     }
 }
 
@@ -116,7 +116,7 @@ void interest( double interest_rate){
          } printAccount();
      }else
      {
-         printf("ERROR - Rate has to be positive");
+         printf("ERROR - Rate has to be positive \n");
      }
 }
 void printAccount(){
