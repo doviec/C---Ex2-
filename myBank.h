@@ -9,7 +9,6 @@
 
 extern double accountArr [ROWS][COLUMMS];
 
-
 void openAccount (double amount);
 void ballance (int account_number);
 void deposit(int account_number, double amount);
